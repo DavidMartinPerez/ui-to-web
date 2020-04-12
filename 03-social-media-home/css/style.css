@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --active: #FFDF3B;
+    --text-notification: #333333;
+    --bg-color: #242C39;
+    --font-color: #fff;
+
+    --max-width: 480px;
+    /*
+    --active: #e60000;
+    --text-notification: #fff;
+    --font-color: #242C39;
+    --bg-color: #fff;
+    */
+}
+
+html {
+    background-color: #2c3747;
+}
+
+body {
+    font-family: 'Montserrat';
+    background: var(--bg-color);
+    color: var(--font-color);
+
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: relative;
+}
+
+.live {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+    padding: 30px 0px 0px 20px;
+    margin-bottom: 20px;
+}
+
+.live .person {
+    position: relative;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.live .profile-pic {
+    position: relative;
+    background-position: 50%;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.live .person:nth-child(1) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1541943181603-d8fe267a5dcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=612&q=80');
+}
+
+.live .person:nth-child(2) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1566807810030-3eaa60f3e670?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+}
+
+.live .person:nth-child(3) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1529680459049-bf0340fa0755?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+}
+
+.live .person:nth-child(4) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1504884790557-80daa3a9e621?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+}
+
+
+.live .person:nth-child(5) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1506919258185-6078bba55d2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1030&q=80');
+}
+
+.live .person:nth-child(6) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80');
+}
+
+.live .person:nth-child(7) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1536650125622-3f48add6cb51?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
+}
+
+.live .person:nth-child(8) .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1559577084-6f5df3078c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+}
+
+.live .profile-pic::before {
+    content: '';
+    display: inline-block;
+    border: 3px solid #454D5A;
+    padding: 24px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.live .person .name {
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+.live-active .profile-pic::before {
+    border-color: var(--active) !important;
+}
+
+.live-active span {
+    background: var(--active);
+    color: var(--text-notification);
+    position: absolute;
+    font-size: 10px;
+    border-radius: 50px;
+    padding: 2px 0px;
+    font-weight: 600;
+    width: 50px;
+    display: inline-block;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.live-active i {
+    padding-right: 3px;
+}
+
+.nav {
+    background-color: var(--bg-color);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    border-top: 1.5px solid #454D5A;
+    max-width: var(--max-width);
+}
+
+.nav .icon {
+    flex: 1;
+    text-align: center;
+    color: #8E919A;
+}
+
+.nav .icon p {
+    display: none;
+}
+
+.active {
+    color: var(--active) !important;
+}
+
+.newsfeed {
+    padding: 0 20px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    box-shadow:  0 0 12px 2px rgba(0, 0, 0, .5);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-style: 14px;
+}
+
+.card .picture {
+    background-image: url('https://images.unsplash.com/photo-1508166785545-c2dd4c113c66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+    background-position: 50%;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card .header {
+    display: flex;
+    align-items: center;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+}
+
+.card .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1566807810030-3eaa60f3e670?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+    background-position: 50%;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.card .detail {
+    margin-left: 10px;
+}
+
+.card .posted {
+    font-size: 10px;
+    padding-top: 3px;
+}
+
+.card .desc {
+    padding-top: 10px;
+    line-height: 1.5;
+}
+
+.card .tags {
+    font-size: 12px;
+    color: var(--active);
+    padding-top: 5px;
+}
+
+.card .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 0px 15px;
+}
+
+.card .footer .like {
+    flex: 0 0 30%;
+}
+.card .footer .like i {
+    color: #e60000;
+}
+
+.card .footer .comment {
+    flex: 1;
+}
+
+.card .footer .save {
+    align-self: self-end;
+    color: #454D5A;
+}
+
+.publication-2 .profile-pic {
+    background-image: url('https://images.unsplash.com/photo-1541943181603-d8fe267a5dcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=612&q=80') !important;
+}
+
+.publication-2 .picture {
+    background-size: contain;
+    background-image: url('https://images.unsplash.com/photo-1541943181603-d8fe267a5dcf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=612&q=80') !important;
+}
+
+.publication-2 .picture::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #fff, transparent, transparent, #fff);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.space {
+    height: 60px;
+}
